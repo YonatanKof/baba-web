@@ -1,0 +1,15 @@
+@mixin flex-center() {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-width($width: var(--display-width-normal)) {
+	max-width: $width;
+	margin: 0 auto;
+	padding-inline: var(--space-m);
+}
+
+@mixin linear-gradient($deg, $clr, $int, $end) {
+    background: linear-gradient($deg, rgba($clr, $int) 0%, rgba($clr, 0) $end);
+}

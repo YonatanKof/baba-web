@@ -11,5 +11,19 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+  css: ['~/assets/styles/style.scss'],
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: `
+						@use '~/assets/styles/normalize' as *; 
+						@use '~/assets/styles/mixins' as *; 
+						@use '~/assets/styles/utopia' as *; 
+						@use '~/assets/styles/typography' as *;`,
+				},
+			},
+		},
+	},
 	devtools: { enabled: true },
 });
