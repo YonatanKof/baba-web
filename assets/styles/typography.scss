@@ -52,50 +52,50 @@ h1 {
 	margin-block-end: var(--space-s);
 }
 h2 {
-	font-size: var(--step-4);
-}
-h3 {
 	font-size: var(--step-3);
 }
-h4 {
-	font-size: var(--step-2);
-}
-h5 {
+h3 {
 	font-size: var(--step-1);
 }
-h6 {
+h4 {
 	font-size: var(--step-0);
 }
-a {
-	font-family: var(--font-mono);
-	font-weight: 444;
-	transition: font-weight 0.15s ease-in-out;
-	&:hover {
-		font-weight: 777;
-	}
+h5 {
+	font-size: var(--step--1);
 }
-:is(h1, h2, h3, h4, h5, h6, code) a {
-	color: inherit;
-	text-decoration: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	&:before {
-		color: var(--color-sys-dim);
-		content: '#';
-		display: inline-block;
-		margin-left: -0.8em;
-		text-decoration: none;
-		visibility: hidden;
-		width: 0.8em;
-	}
-	&:hover::before {
-		visibility: visible;
-	}
-	&:hover {
-		font-weight: unset;
-		text-decoration: underline;
-	}
+h6 {
+	font-size: var(--step--2);
 }
+// a {
+// 	font-family: var(--font-mono);
+// 	font-weight: 444;
+// 	transition: font-weight 0.15s ease-in-out;
+// 	&:hover {
+// 		font-weight: 777;
+// 	}
+// }
+// :is(h1, h2, h3, h4, h5, h6, code) a {
+// 	color: inherit;
+// 	text-decoration: inherit;
+// 	font-family: inherit;
+// 	font-weight: inherit;
+// 	&:before {
+// 		color: var(--color-sys-dim);
+// 		content: '#';
+// 		display: inline-block;
+// 		margin-left: -0.8em;
+// 		text-decoration: none;
+// 		visibility: hidden;
+// 		width: 0.8em;
+// 	}
+// 	&:hover::before {
+// 		visibility: visible;
+// 	}
+// 	&:hover {
+// 		font-weight: unset;
+// 		text-decoration: underline;
+// 	}
+// }
 code {
 	background-color: var(--color-sys-dis);
 	padding: var(--space-4xs) var(--space-3xs);
