@@ -24,9 +24,3 @@ const { data } = await useAsyncData('equal', () => {
 		<ItemList :item-list="data" />
 	</main>
 </template>
-<style lang="scss" scoped>
-// main {
-// 	max-width: 1280px;
-// 	width: 75;
-// }
-</style>
