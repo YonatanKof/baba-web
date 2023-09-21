@@ -49,3 +49,16 @@ img ~ em {
 	padding-inline-start: var(--space-3xs);
 	border-inline-start: var(--color-sys-dim) solid var(--space-4xs);
 }
+
+// @media (prefers-color-scheme: light) {
+// 	:root {
+// 	  color: #213547;
+// 	  background-color: #ffffff;
+// 	}
+// 	a:hover {
+// 	  color: #747bff;
+// 	}
+// 	button {
+// 	  background-color: #f9f9f9;
+// 	}
+//   }

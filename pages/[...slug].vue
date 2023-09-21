@@ -23,7 +23,6 @@ const { data } = await useAsyncData('equal', () => {
 <style lang="scss" scoped>
 span {
 	display: grid;
-	// grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 	grid-template-columns: 1fr 2fr;
 	gap: var(--space-s);
 }
