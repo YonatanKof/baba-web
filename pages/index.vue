@@ -1,10 +1,13 @@
 <script setup>
+import BabaOffOn from '../components/BabaOffOn.vue';
+
 const { data } = await useAsyncData('equal', () => {
 	return queryContent('services').where({}).find();
 });
 </script>
 <template>
 	<main>
+		<BabaOffOn />
 		<h1>Oded Babayoff</h1>
 		<h2>Design Consulting Services</h2>
 		<p>
