@@ -11,7 +11,6 @@ export default defineNuxtConfig({
 			},
 		},
 	},
-	css: ['~/assets/styles/style.scss'],
 	vite: {
 		css: {
 			preprocessorOptions: {
@@ -20,7 +19,8 @@ export default defineNuxtConfig({
 						@use '~/assets/styles/reset' as *; 
 						@use '~/assets/styles/mixins' as *; 
 						@use '~/assets/styles/utopia' as *; 
-						@use '~/assets/styles/typography' as *;`,
+						@use '~/assets/styles/typography' as *;
+						@use '~/assets/styles/style' as *;`,
 				},
 			},
 		},
