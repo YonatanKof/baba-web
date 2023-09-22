@@ -1,5 +1,4 @@
 <script setup>
-import BabaOffOn from '../components/BabaOffOn.vue';
 
 const { data } = await useAsyncData('equal', () => {
 	return queryContent('services').where({}).find();
@@ -7,9 +6,8 @@ const { data } = await useAsyncData('equal', () => {
 </script>
 <template>
 	<main>
-		<BabaOffOn />
-		<h1>Oded Babayoff</h1>
-		<h2>Design Consulting Services</h2>
+		<!-- <h1>Oded Babayoff</h1> -->
+		<!-- <h2>Design Consulting Services</h2> -->
 		<p>
 			With over 15 years of extensive experience in leading design teams across diverse tech organizations, I
 			successfully delivered numerous products to market and developed winning design strategies.
