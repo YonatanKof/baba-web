@@ -42,7 +42,7 @@ main {
 
 div {
 	/* margin-block-end: var(--space-s); */
-	background-color: aliceblue;
+	background-color: var(--color-sys-invert-highlight);
 	box-shadow: var(--shadow-md);
 	overflow: auto;
 	transition: all ease-in-out 0.25s;

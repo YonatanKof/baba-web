@@ -10,22 +10,17 @@
 	--color-sys-dim: hsla(0, 0%, 10%, 0.5);
 	--color-sys-dis: hsla(0, 0%, 10%, 0.1);
 	--color-sys-invert: antiquewhite;
+	--color-sys-invert-highlight: white;
+	--shadow-color: var(--color-sys-dis);
 
 	--bg-primary: var(--color-sys-invert);
+	--bg-primary-highlight: var(--color-sys-invert);
 	--content-space: 1rem;
 	--space-md: 1rem;
 	--bg-pre: none;
 
-	--shadow-md: 
-		0px 0.15rem 0.2rem 0 var(--color-sys-dis), 
-		0px 0.3rem 0.4rem 0 var(--color-sys-dis),
-		0px 0.6rem 0.8rem 0 var(--color-sys-dis), 
-		0px 1.2rem 1.6rem 0 var(--color-sys-dis);
-	--shadow-lg: 
-		0.05rem 0.2rem 0.2rem 0 var(--color-sys-dis), 
-		0.1rem 0.4rem 0.4rem 0 var(--color-sys-dis),
-		0.2rem 0.8rem 0.8rem 0 var(--color-sys-dis), 
-		0.4rem 1.6rem 1.6rem 0 var(--color-sys-dis);
+	--shadow-md: 0px 0.3rem 0.4rem 0 var(--shadow-color), 0px 1.2rem 1.6rem 0 var(--shadow-color);
+	--shadow-lg: 0.1rem 0.4rem 0.4rem 0 var(--shadow-color), 0.4rem 1.6rem 1.6rem 0 var(--shadow-color);
 	--font-wight--bolder: bolder;
 	--font-size-2xl: 2em;
 }
@@ -49,16 +44,21 @@ img ~ em {
 	padding-inline-start: var(--space-3xs);
 	border-inline-start: var(--color-sys-dim) solid var(--space-4xs);
 }
+button {
+	background-color: var(--color-sys-invert-highlight);
+	font-size: var(--step--2);
+	padding: var(--space-2xs) var(--space-xs) ;
+	border-radius: var(--border-radius);
+	border: none;
+	box-shadow: var(--shadow-md);
+	white-space: nowrap;
+}
 
-// @media (prefers-color-scheme: light) {
-// 	:root {
-// 	  color: #213547;
-// 	  background-color: #ffffff;
-// 	}
-// 	a:hover {
-// 	  color: #747bff;
-// 	}
-// 	button {
-// 	  background-color: #f9f9f9;
-// 	}
-//   }
+.dark {
+	--color-sys-main: hsl(34, 40%, 90%);
+	--color-sys-dim: hsla(34, 40%, 90%, 0.5);
+	--color-sys-dis: hsla(34, 40%, 90%, 0.1);
+	--color-sys-invert: hsl(34, 40%, 10%);
+	--color-sys-invert-highlight: hsl(34, 40%, 4%);
+	--shadow-color: none;
+}
