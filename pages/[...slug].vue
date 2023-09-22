@@ -8,10 +8,11 @@ const { data } = await useAsyncData('equal', () => {
 		<ContentDoc v-slot="{ doc }">
 			<main>
 				<ContentRenderer :value="doc">
-					<h1>{{ doc.title }}</h1>
+					<h2 id="title">{{ doc.title }}</h2>
 					<span>
 						<img :src="doc.image" alt="" />
-						<p>{{ doc.description }}</p>
+
+						<p><ContentRenderer :value="doc" /></p>
 					</span>
 				</ContentRenderer>
 			</main>
@@ -21,9 +22,12 @@ const { data } = await useAsyncData('equal', () => {
 </template>
 
 <style lang="scss" scoped>
+#title {
+	margin-top: var(--space-l);
+}
 span {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	gap: var(--space-s);
+	gap: var(--space-m);
 }
 </style>
