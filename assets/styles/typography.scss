@@ -10,13 +10,17 @@
 	font-family: 'PoppinsExtraBold';
 	src: url('~/assets/fonts/Poppins-ExtraBold.ttf');
 }
+@font-face {
+	font-family: 'PoppinsSemiBold';
+	src: url('~/assets/fonts/Poppins-SemiBold.ttf');
+}
 
 :root {
 	--font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol';
 	--font-mono: RecMonoCasual;
 	--font-hand: CaveatBold;
-	--font-title: PoppinsExtraBold;
+	--font-title: PoppinsSemiBold;
 }
 html,
 body,
@@ -29,7 +33,8 @@ h5,
 h6,
 label,
 input,
-textarea {
+textarea,
+button {
 	font-family: var(--font-body);
 	font-size: var(--step-0);
 	line-height: 1.5;
@@ -43,7 +48,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 500;
 	font-family: var(--font-title);
 }
 i,
@@ -56,6 +60,7 @@ strong {
 h1 {
 	font-size: var(--step-6);
 	margin-block-end: var(--space-s);
+	font-family: PoppinsExtraBold;
 }
 h2 {
 	font-size: var(--step-3);
