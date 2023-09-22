@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['@nuxt/content'],
+	modules: ['@nuxt/content', '@vueuse/nuxt'],
 	content: {
 		highlight: {
 			theme: 'github-light',
@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 			},
 		},
 	},
-  css: ['~/assets/styles/style.scss'],
+	css: ['~/assets/styles/style.scss'],
 	vite: {
 		css: {
 			preprocessorOptions: {
