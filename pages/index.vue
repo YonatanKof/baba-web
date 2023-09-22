@@ -1,13 +1,10 @@
 <script setup>
-
 const { data } = await useAsyncData('equal', () => {
 	return queryContent('services').where({}).find();
 });
 </script>
 <template>
 	<main>
-		<!-- <h1>Oded Babayoff</h1> -->
-		<!-- <h2>Design Consulting Services</h2> -->
 		<p>
 			With over 15 years of extensive experience in leading design teams across diverse tech organizations, I
 			successfully delivered numerous products to market and developed winning design strategies.
@@ -21,7 +18,16 @@ const { data } = await useAsyncData('equal', () => {
 			priorities & goals.
 		</p>
 
-		<h2>Services</h2>
+		<h2 id="services">Services</h2>
 		<ItemList :item-list="data" />
 	</main>
 </template>
+
+<style scoped>
+#services {
+	margin-top: var(--space-l);
+}
+p:first-child {
+	margin-top: var(--space-l);
+}
+</style>
