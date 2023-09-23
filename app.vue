@@ -1,11 +1,21 @@
 <script setup lang="ts">
 // const config = useRuntimeConfig();
-const siteTitle = `A site by Oded Babayoff`;
+const siteTitle = `Oded Babayoff - Design manager of the gods`;
 useHead({
 	titleTemplate: (titleChunk) => {
 		return titleChunk ? `${titleChunk} - ` + siteTitle : siteTitle;
 	},
-	meta: [{ property: 'author', content: 'Oded Babayoff' }],
+});
+useSeoMeta({
+	ogType: 'website',
+	description: () => `Take your org to the next level through design with Oded Babayoff`,
+	ogDescription: () => `Take your org to the next level through design with Oded Babayoff`,
+	twitterDescription: () => `Take your org to the next level through design with Oded Babayoff`,
+	ogImage: 'main-baba.jpg',
+	twitterImage: 'main-baba.jpg',
+	ogImageAlt: 'Oded Babayoff in TLV',
+	twitterImageAlt: 'Oded Babayoff in TLV',
+	twitterCard: 'summary_large_image',
 });
 </script>
 
