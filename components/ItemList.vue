@@ -54,7 +54,7 @@ div {
 }
 span{
 	display: block;
-	padding-inline: var(--space-s);
+	padding: var(--space-xs) var(--space-s);
 }
 a {
 	/* padding: var(--space-s); */

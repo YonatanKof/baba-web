@@ -36,6 +36,7 @@ img {
 	width: 100%;
 	height: auto;
 	border-radius: var(--border-radius);
+	display: flow-root;
 }
 
 img ~ em {
@@ -47,11 +48,12 @@ img ~ em {
 button {
 	background-color: var(--color-sys-invert-highlight);
 	font-size: var(--step--2);
-	padding: var(--space-2xs) var(--space-xs) ;
+	padding: var(--space-2xs) var(--space-xs);
 	border-radius: var(--border-radius);
 	border: none;
-	box-shadow: var(--shadow-md);
+	// box-shadow: var(--shadow-md);
 	white-space: nowrap;
+	cursor: pointer;
 }
 
 .dark {

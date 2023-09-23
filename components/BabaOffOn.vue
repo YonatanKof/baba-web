@@ -41,6 +41,10 @@ div {
 	--the-letter-o-quad: calc(var(--the-letter-o-height) / 4);
 	--the-inset: 0.825rem;
 }
+h1{
+	margin: 0;
+	padding-bottom: var(--space-xs);
+}
 #the-name {
 	color: var(--color-sys-main);
 	font-size: var(--the-letter-o-width);
