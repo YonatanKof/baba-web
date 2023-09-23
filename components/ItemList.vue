@@ -17,8 +17,8 @@ const props = defineProps({
 		<div v-for="service in itemList" :key="service._path">
 			<NuxtLink :to="service._path + '/'">
 				<img :src="service.image" alt="" />
-				<span
-					><h3>{{ service.title }}</h3>
+				<span>
+					<h3>{{ service.title }}</h3>
 					<p>{{ service.description }}</p>
 				</span>
 			</NuxtLink>
@@ -29,9 +29,11 @@ const props = defineProps({
 	</p>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 a {
 	text-decoration: none;
+	inset: 0;
+	display: block;
 }
 main {
 	gap: var(--space-s);
@@ -41,7 +43,6 @@ main {
 }
 
 div {
-	/* margin-block-end: var(--space-s); */
 	background-color: var(--color-sys-invert-highlight);
 	box-shadow: var(--shadow-md);
 	overflow: auto;
@@ -52,17 +53,13 @@ div {
 		transform: scale(1.01);
 	}
 }
-span{
+span {
 	display: block;
 	padding: var(--space-xs) var(--space-s);
 }
-a {
-	/* padding: var(--space-s); */
-	inset: 0;
-	display: block;
-}
 p {
 	font-size: var(--step--1);
+	color: var(--color-sys-dim);
 }
 img {
 	border-radius: unset;

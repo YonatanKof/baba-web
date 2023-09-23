@@ -81,10 +81,13 @@ h6 {
 }
 a {
 	font-family: var(--font-mono);
+	color: var(--color-sys-dim);
 	font-weight: 444;
-	transition: font-weight 0.15s ease-in-out;
-	&:hover {
-		font-weight: 777;
+	transition: color 0.15s ease-in-out;
+	text-decoration: underline;
+	&:hover{
+		color: var(--color-sys-main);
+
 	}
 }
 // :is(h1, h2, h3, h4, h5, h6, code) a {
