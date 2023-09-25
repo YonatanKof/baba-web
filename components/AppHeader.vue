@@ -8,9 +8,12 @@ const toggleDark = useToggle(isDark);
 		<div>
 			<BabaOffOn />
 			<!-- <ChangeIsGood /> -->
-			<span>
-				<nuxt-link v-show="$route.path !== '/'" to="/">Home</nuxt-link>
-				<p v-show="$route.path === '/'"></p>
+			<span id="links">
+				<span>
+					<nuxt-link to="contact">Contact</nuxt-link>
+					<nuxt-link v-show="$route.path !== '/'" to="/">Home</nuxt-link>
+				</span>
+				<!-- <p v-show="$route.path === '/'"></p> -->
 				<button @click="toggleDark()">
 					<IconSun v-if="isDark" />
 					<IconMoon v-else />
@@ -31,9 +34,13 @@ button {
 	@include flex-center;
 	margin: 0;
 }
-span {
+#links {
 	@include flex-center;
 	gap: var(--space-4xs);
+}
+span {
+	display: flex;
+	gap: var(--space-2xs);
 }
 a {
 	margin: 0;
