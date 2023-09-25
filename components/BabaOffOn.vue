@@ -1,10 +1,4 @@
 <script setup>
-import { ref, watch } from 'vue';
-
-// defineProps({
-// 	msg: String,
-// });
-
 const turnOn = ref(false);
 let timeout;
 watch(turnOn, () => {
@@ -21,10 +15,11 @@ watch(turnOn, () => {
 	<div>
 		<h1 id="the-name">
 			Oded
-			<span class="ws"
-				>Babay<span id="the-letter-o"
-					>o<span class="off-on-toggle" :class="{ on: turnOn }" @click="turnOn = !turnOn"> </span
-				></span>
+			<span class="ws">
+				Babay<span id="the-letter-o"
+					>o
+					<span class="off-on-toggle" :class="{ on: turnOn }" @click="turnOn = !turnOn"> </span>
+				</span>
 				<span v-if="turnOn">n</span>
 				<span v-else>ff</span>
 			</span>
@@ -41,7 +36,7 @@ div {
 	--the-letter-o-quad: calc(var(--the-letter-o-height) / 4);
 	--the-inset: 0.825rem;
 }
-h1{
+h1 {
 	margin: 0;
 	padding-bottom: var(--space-xs);
 }
@@ -90,11 +85,11 @@ h1{
 	}
 }
 @media screen and (max-width: 600px) {
-  div {
-    --the-letter-o-width: 2.5rem;
-	--the-letter-o-height: 1.5rem;
-	--the-letter-o-thick: 0.5416rem;
-	--the-inset: 0.6875rem
-  }
+	div {
+		--the-letter-o-width: 2.5rem;
+		--the-letter-o-height: 1.5rem;
+		--the-letter-o-thick: 0.5416rem;
+		--the-inset: 0.6875rem;
+	}
 }
 </style>

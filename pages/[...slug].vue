@@ -1,8 +1,3 @@
-<!-- <script setup>
-const { data } = await useAsyncData('equal', () => {
-	return queryContent('services').where({}).find();
-});
-</script> -->
 <template>
 	<main>
 		<ContentDoc v-slot="{ doc }">
