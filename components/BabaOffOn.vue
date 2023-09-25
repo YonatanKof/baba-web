@@ -1,11 +1,33 @@
 <script setup>
+const norm = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji'";
+const crazy = 'Kablammo, cursive';
+const rootFont = ref(norm);
+
+function setFont() {
+	var font = document.documentElement.style.getPropertyValue('--font-body');
+	if (font === norm) {
+		font = crazy;
+	} else {
+		font = norm;
+	}
+	return font;
+}
+
+const changeRootFont = () => {
+	document.documentElement.style.setProperty('--font-body', setFont());
+	setRootFont();
+};
+const setRootFont = () => (rootFont.value = getComputedStyle(document.documentElement).getPropertyValue('--font-body'));
+
+onMounted(changeRootFont);
+
 const turnOn = ref(false);
 let timeout;
 watch(turnOn, () => {
 	clearTimeout(timeout);
 	timeout = setTimeout(() => {
-		if (turnOn.value === true) {
-			turnOn.value = false;
+		if (turnOn.value === true && rootFont.value === crazy) {
+			(turnOn.value = false), (rootFont.value = norm && changeRootFont());
 		}
 	}, 2500);
 });
@@ -18,7 +40,7 @@ watch(turnOn, () => {
 			<span class="ws">
 				Babay<span id="the-letter-o"
 					>o
-					<span class="off-on-toggle" :class="{ on: turnOn }" @click="turnOn = !turnOn"> </span>
+					<span class="off-on-toggle" :class="{ on: turnOn }" @click="(turnOn = !turnOn), changeRootFont()"> </span>
 				</span>
 				<span v-if="turnOn">n</span>
 				<span v-else>ff</span>
@@ -26,6 +48,11 @@ watch(turnOn, () => {
 		</h1>
 	</div>
 </template>
+<style scoped>
+.root {
+	font-family: var(--font-body);
+}
+</style>
 
 <style lang="scss">
 div {
@@ -91,5 +118,8 @@ h1 {
 		--the-letter-o-thick: 0.5416rem;
 		--the-inset: 0.6875rem;
 	}
+}
+:root {
+	--font-body: v-bind(rootFont);
 }
 </style>

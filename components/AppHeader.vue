@@ -7,6 +7,7 @@ const toggleDark = useToggle(isDark);
 	<header>
 		<div>
 			<BabaOffOn />
+			<!-- <ChangeIsGood /> -->
 			<span>
 				<nuxt-link v-show="$route.path !== '/'" to="/">Home</nuxt-link>
 				<button @click="toggleDark()">
