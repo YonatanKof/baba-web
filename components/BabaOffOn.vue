@@ -1,5 +1,6 @@
 <script setup>
-const norm = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji'";
+const norm =
+	"Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji'";
 const crazy = 'Kablammo, cursive';
 const rootFont = ref(norm);
 
@@ -58,10 +59,11 @@ watch(turnOn, () => {
 div {
 	--the-letter-o-width: 3rem;
 	--the-letter-o-height: 1.8rem;
-	--the-letter-o-thick: 0.65rem;
-	--the-letter-o-half: calc(var(--the-letter-o-height) / 2);
-	--the-letter-o-quad: calc(var(--the-letter-o-height) / 4);
+	// If you want outline for the O
+	// --the-letter-o-thick: 0.65rem;
 	--the-inset: 0.825rem;
+	--the-offset: 0.5rem;
+	--the-half-offset: calc(var(--the-offset) / 2);
 }
 h1 {
 	margin: 0;
@@ -87,35 +89,39 @@ h1 {
 	position: absolute;
 	width: var(--the-letter-o-width);
 	height: var(--the-letter-o-height);
-	border-radius: var(--the-letter-o-half);
+	border-radius: var(--the-letter-o-height);
 	inset: var(--the-inset) 0;
-	box-shadow: inset 0 0 0 var(--the-letter-o-thick) var(--color-sys-main);
+	// If you want outline for the O
+	// box-shadow: inset 0 0 0 var(--the-letter-o-thick) var(--color-sys-main);
+	background-color: var(--color-sys-main);
 	cursor: pointer;
 	&:after {
 		transition: all 0.1s ease-out;
 		content: '';
 		display: inline-block;
 		position: absolute;
-		height: var(--the-letter-o-half);
-		width: var(--the-letter-o-half);
-		background-color: grey;
-		inset: var(--the-letter-o-quad) 0 0 var(--the-letter-o-quad);
-		border-radius: var(--the-letter-o-half);
-		box-shadow: inset -0.1rem -0.2rem 0.3rem 0.05rem hsla(0, 0%, 0%, 0.25);
+		width: calc(var(--the-letter-o-height) - var(--the-offset));
+		height: calc(var(--the-letter-o-height) - var(--the-offset));
+		background-color: var(--bg-primary);
+		top: var(--the-half-offset);
+		left: var(--the-half-offset);
+		border-radius: var(--the-letter-o-height);
+		// box-shadow: inset -0.1rem -0.2rem 0.3rem 0.05rem hsla(0, 0%, 0%, 0.25);
 	}
 }
 .on {
 	&:after {
 		background-color: red;
 		box-shadow: 0 0 0.25rem hsla(0, 100%, 50%, 0.5), inset 0.1rem 0.2rem 0.3rem 0.05rem hsla(0, 100%, 65%, 0.9);
-		inset: var(--the-letter-o-quad) 0 0 calc(var(--the-letter-o-half) + var(--the-letter-o-thick));
+		left: calc(var(--the-letter-o-width) + var(--the-half-offset) - var(--the-letter-o-height));
+		// inset: 0 calc(var(--the-letter-o-width) - var(--the-letter-o-height));
 	}
 }
 @media screen and (max-width: 600px) {
 	div {
 		--the-letter-o-width: 2.5rem;
 		--the-letter-o-height: 1.5rem;
-		--the-letter-o-thick: 0.5416rem;
+		// --the-letter-o-thick: 0.5416rem;
 		--the-inset: 0.6875rem;
 	}
 }
