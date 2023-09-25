@@ -35,11 +35,9 @@ a {
 	inset: 0;
 	display: block;
 }
-main {
-	gap: var(--space-s);
-}
 .grid {
 	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+	gap: var(--space-s);
 }
 
 div {

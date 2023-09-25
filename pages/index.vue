@@ -26,8 +26,9 @@ const { data } = await useAsyncData('equal', () => {
 <style scoped>
 #services {
 	margin-top: var(--space-l);
+	margin-bottom: var(--space-s);
 }
 p:first-child {
-	margin-top: var(--space-l);
+	margin-top: var(--space-m);
 }
 </style>
