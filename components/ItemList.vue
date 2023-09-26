@@ -34,6 +34,11 @@ a {
 	text-decoration: none;
 	inset: 0;
 	display: block;
+	font-weight: unset;
+	&:hover{
+		font-weight: unset;
+
+	}
 }
 .grid {
 	grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));

@@ -89,8 +89,10 @@ a {
 	font-weight: 444;
 	transition: color 0.15s ease-in-out;
 	text-decoration: underline;
+	transition: all 0.2s ease-in-out;
 	&:hover{
 		color: var(--color-sys-main);
+		font-weight: 666;
 
 	}
 }
